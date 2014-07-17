@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require_relative '../lib/extension_lister'
+include ExtensionLister
+if ARGV.empty?
+  ExtensionLister::CLI.start(%w[usage])
+else
+  ExtensionLister::CLI.start(%w[execute].concat(ARGV))
+end

@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = ExtensionLister::VERSION
   spec.authors       = ['Burin Choomnuan']
   spec.email         = ['agilecreativity@gmail.com']
-  spec.summary       = %q{CLI template for ExtensionLister}
-  spec.description   = %q{The starting template for ExtensionLister}
+  spec.summary       = %q{List unique file extensions from any given directory recursively}
+  spec.description   = %q{List unique file extensions from any starting directory recursively}
   spec.homepage      = 'https://github.com/agilecreativity/extension_lister'
   spec.license       = 'MIT'
   spec.files         = `git ls-files -z`.split("\x0")

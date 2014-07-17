@@ -1,33 +1,31 @@
 require 'thor'
 module ExtensionLister
   class CLI < Thor
-    desc 'execute', 'Execute the main program'
+    desc 'list', 'List all unique extensions'
+    method_option "base_dir",
+                  aliases:  "-b",
+                  desc:     "Base directory",
+                  default:  File.expand_path(".")
+
     method_option 'version',
                   aliases: '-v',
                   desc: 'Display version number'
-    def execute
+    def list
       opts = options.symbolize_keys
       if opts[:version]
         puts "You are using ExtensionLister version #{ExtensionLister::VERSION}"
         exit
       end
-      puts "Your options #{opts}"
-      process(opts)
+      puts list_extensions(opts[:base_dir])
     end
-
-    desc 'usage', 'Display help screen'
-    def usage
-      puts <<-EOS
-Add your sample usage here!
-      EOS
-    end
-
-    default_task :usage
 
     private
 
-    def process(opts = {})
-      puts "Your options #{opts}"
+    def list_extensions(base_dir = ".")
+      extensions = Dir.glob(File.join(File.expand_path(base_dir), "**/*")).reduce([]) do |exts, file|
+        exts << File.extname(file)
+      end
+      extensions.sort.uniq.delete_if { |e| e == "" }
     end
   end
 end

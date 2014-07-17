@@ -8,20 +8,6 @@
 [gemnasium]: https://gemnasium.com/agilecreativity/extension_lister
 [codeclimate]: https://codeclimate.com/github/agilecreativity/extension_lister
 
-Quickly generate the starting template for creating CLI ruby gem.
-Generated template contain the simplest possible structure so that we don't have
-to start from scratch.
-
-Features:
-
-- Test with [minitest][]
-- Build with the power of [Thor][]
-- Debug with pry[pry][]
-- Documentation with [yard][]
-- Style check with [rubocop][]
-- BDD/TDD with guard [guard][]
-- Initial git manipulation using [grit][]
-
 ### Installation
 
 Add this line to your application's Gemfile:
@@ -38,12 +24,16 @@ Or install it yourself as:
 
 ### Usage
 
-Use as library try
+- List all extension from a current directory (recursively)
 
-```ruby
-require 'extension_lister'
-include ExtensionLister
-# then call the appropriate functions
+```
+extension_lister
+```
+
+- List all extension from a given directory
+
+```
+extension_lister -b ~/Downloads
 ```
 
 ### Contributing

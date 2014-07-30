@@ -1,4 +1,4 @@
-## ExtensionLister
+## extension_lister
 
 [![Gem Version](https://badge.fury.io/rb/extension_lister.svg)][gem]
 [![Dependency Status](https://gemnasium.com/agilecreativity/extension_lister.png)][gemnasium]
@@ -30,6 +30,16 @@ Or install it yourself as:
 extension_lister
 ```
 
+For typical ruby project like (e.g. this gem), we should get something like:
+
+```
+.gem
+.gemspec
+.lock
+.md
+.rb
+```
+
 - List all extension from a given directory
 
 ```
@@ -38,7 +48,7 @@ extension_lister -b ~/Downloads
 
 ### Contributing
 
-1. Fork it
+1. [Fork it](https://github.com/agilecreativity/extension_lister/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

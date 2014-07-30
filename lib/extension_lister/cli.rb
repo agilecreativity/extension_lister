@@ -1,6 +1,9 @@
 require 'thor'
+require 'agile_utils'
 module ExtensionLister
   class CLI < Thor
+    using AgileUtils::HashExt
+
     desc 'list', 'List all unique extensions'
     method_option "base_dir",
                   aliases:  "-b",

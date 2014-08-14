@@ -1,9 +1,7 @@
 require 'thor'
-require 'agile_utils'
+require 'hashie'
 module ExtensionLister
   class CLI < Thor
-    using AgileUtils::HashExt
-
     desc 'list', 'List all unique extensions'
     method_option "base_dir",
                   aliases:  "-b",
@@ -14,7 +12,7 @@ module ExtensionLister
                   aliases: '-v',
                   desc: 'Display version number'
     def list
-      opts = options.symbolize_keys
+      opts = Hashie::Hash[options].to_hash(symbolize_keys: true)
       if opts[:version]
         puts "You are using ExtensionLister version #{ExtensionLister::VERSION}"
         exit

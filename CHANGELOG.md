@@ -1,5 +1,9 @@
 ### Changelogs
 
+#### 0.2.2
+
+- Using hashie gem to make it possible to use with ruby 1.9.3+
+
 #### 0.2.1
 
 - Make ruby 2.1.0+ mandatory requirement

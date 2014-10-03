@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../lib/extension_lister'
-include ExtensionLister
 if ARGV.empty?
-  ExtensionLister::CLI.start %w[list --base-dir .]
+  ExtensionLister::CLI.start(%w[list --base-dir .])
 else
   ExtensionLister::CLI.start(%w[list].concat(ARGV))
 end

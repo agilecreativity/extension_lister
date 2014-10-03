@@ -1,5 +1,10 @@
 ### Changelogs
 
+#### 0.2.3
+
+- Use `require` instead of `require_relative`
+- Misc code cleanup
+
 #### 0.2.2
 
 - Using hashie gem to make it possible to use with ruby 1.9.3+

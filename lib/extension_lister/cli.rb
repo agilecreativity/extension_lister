@@ -1,5 +1,3 @@
-require 'thor'
-require 'hashie'
 module ExtensionLister
   class CLI < Thor
     desc 'list', 'List all unique extensions'

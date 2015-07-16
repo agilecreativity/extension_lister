@@ -1,5 +1,10 @@
 ### Changelogs
 
+#### 0.2.5
+
+- Update gem's dependencies
+- Make use of optimistic gem versioning
+
 #### 0.2.4
 
 - Minor code cleanup
